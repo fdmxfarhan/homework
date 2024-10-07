@@ -1,0 +1,76 @@
+doctype html
+
+html
+    head
+        title Homework
+        link(rel="stylesheet" href="/fontawesome-free-6.6.0-web/css/all.css")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        script(src="/js/jquery-3.5.1.min.js")
+        link(rel='stylesheet', href='/css/home.css')
+        link(rel='stylesheet', href='/css/messages.css')
+        -if(theme){
+            -if(theme == 'light'){
+                link(rel='stylesheet', href='/css/theme.css')
+            -}else{
+                link(rel='stylesheet', href='/css/theme-dark.css')
+            -}
+        -}else{
+            link(rel='stylesheet', href='/css/theme.css')
+        -}
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js")
+        script.
+            hljs.initHighlightingOnLoad();
+    body
+        .black-modal
+        nav
+            -if(theme){
+                -if(theme == 'light'){
+                    a.dark(href="/theme?theme=dark") 
+                        i.fa.fa-moon
+                -}else{
+                    a.dark(href="/theme?theme=light") 
+                        i.fa.fa-sun
+                -}
+            -}else{
+                a.dark(href="/theme?theme=dark") 
+                    i.fa.fa-moon
+            -}
+        include ./components/messages
+        h1.home-title ارسال تمرین کلاسی
+
+        form(action="/submit-homework" method="post")
+            .raw
+                label(for="name")  نام و نام خانوادگی: 
+                input(type="text" name="name" placeholder="نام خود را وارد کنید" value="#{typeof(username) == 'undefined' ? '': username}" required)
+            .raw
+                label(for="practiceNum")  شماره تمرین: 
+                input(type="number" name="practiceNum" value="1" min="1" required)
+            .raw
+                label(for="text")  شماره تمرین: 
+            .raw
+                textarea(name="text" placeholder="کد خود را اینجا کپی کنید ..." required)
+            .raw
+                button(type="submit")
+                    i.fa.fa-save
+                    | ارسال
+        
+        -for(var i=homeworks.length-1; i >= 0; i--){
+            .admin-info
+                .question سوال شماره #{homeworks[i].practiceNum}: 
+                .name= homeworks[i].name
+                .date 
+                    i.fa.fa-calendar-alt
+                    | #{homeworks[i].date.year}/#{homeworks[i].date.month}/#{homeworks[i].date.day}
+                .clock 
+                    i.fa.fa-clock
+                    | #{homeworks[i].time}
+            pre.code
+                code(class="python")= homeworks[i].text
+        -}
+        footer
+        //- pre
+        //-     code(class="python")
+        //-         | def fib(n):
+        //-         |   a, b = 0, 1
+                

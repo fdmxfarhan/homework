@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: 'iransans';
+    direction: rtl;
+    background-color: var(--white);
+}
+pre{text-align: left; direction: ltr;}
+@media only screen and (min-width: 800px) {
+    nav{
+        text-align: left;
+        padding: 1vw 5%;
+        padding-bottom: 0;
+    }
+    nav a.dark{
+        text-align: left;
+        font-size: 2vw;
+        color: var(--text);
+    }
+    h1.home-title{
+        font-size: 1.5vw;
+        color: var(--red);
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    form{
+        display: block;
+        width: 90%;
+        margin: 1vw auto;
+    }
+    form label{
+        display: inline-block;
+        font-family: 'iransans';
+        font-size: 1.2vw;
+        color: var(--text);
+        width: 10vw;
+    }
+    form input{
+        display: inline;
+        margin: auto;
+        border: none;
+        outline: none;
+        background-color: var(--lightergray);
+        width: 30%;
+        padding: 0.7vw 1vw;
+        margin-bottom: 1vw;
+        border-radius: 1vw;
+        font-family: 'iransans';
+        margin-left: 1vw;
+        color: var(--black);
+        font-size: 1vw;
+    }
+    form textarea{
+        display: inline;
+        margin: auto;
+        border: none;
+        outline: none;
+        background-color: var(--lightergray);
+        width: 95%;
+        padding: 0.7vw 1vw;
+        margin-bottom: 1vw;
+        border-radius: 1vw;
+        font-family: 'iransans';
+        margin-left: 1vw;
+        color: var(--black);
+        font-size: 1vw;
+        height: 40vh;
+        text-align: left;
+        direction: ltr;
+    }
+    form button{
+        display: inline;
+        margin: auto;
+        border: none;
+        outline: none;
+        background-color: var(--red);
+        color: white;
+        width: 10%;
+        padding: 0.7vw 1vw;
+        margin-bottom: 1vw;
+        border-radius: 1vw;
+        font-family: 'iransans';
+        margin-left: 1vw;
+        font-size: 1vw;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    form button:hover{background-color: var(--green);}
+    form button i{padding-left: 0.5vw;}
+    pre.code{
+        width: 80%;
+        margin: auto;
+    }
+    pre.code code{
+        padding: 1vw 1vw;
+        border-radius: 0.5vw;
+    }
+    .admin-info{
+        width: 80%;
+        margin: 0.5vw auto;
+        margin-top: 2vw;
+        overflow: hidden
+    }
+    .admin-info .question{
+        font-size: 1.2vw;
+        color: var(--red);
+        float: right;
+        width: 10%;
+    }
+    .admin-info .name{
+        font-size: 1.2vw;
+        color: var(--black);
+        float: right;
+        width: 40%;
+    }
+    .admin-info .date{
+        font-size: 1vw;
+        color: var(--text);
+        float: left;
+        width: 10%;
+    }
+    .admin-info .clock{
+        font-size: 1vw;
+        color: var(--text);
+        float: left;
+        width: 10%;
+    }
+    .admin-info .date i{padding-left: 0.5vw;}
+    .admin-info .clock i{padding-left: 0.5vw;}
+    footer{height: 10vh;}
+}
+@media only screen and (max-width: 600px) {}
