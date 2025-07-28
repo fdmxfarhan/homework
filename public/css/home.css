@@ -131,5 +131,15 @@ pre{text-align: left; direction: ltr;}
     .admin-info .date i{padding-left: 0.5vw;}
     .admin-info .clock i{padding-left: 0.5vw;}
     footer{height: 10vh;}
+    a.link{
+        font-family: 'iransans';
+        font-size: 1vw;
+        color: white;
+        background-color: var(--red);
+        font-weight: normal;
+        border-radius: 1vw;
+        padding: 0.4vw 1vw;
+        margin: 0 1vw;
+    }
 }
 @media only screen and (max-width: 600px) {}

@@ -38,7 +38,9 @@ html
             -}
         include ./components/messages
         h1.home-title ارسال تمرین کلاسی
-
+        a.link(href="https://github.com/fdmxfarhan/MachineLearning") لینک گیتهاب 
+        a.link(href="https://t.me/helli115") لینک گروه تلگرام 
+        a.link(href="/iris.csv" target="__blank" download) دانلود دیتاست 
         form(action="/submit-homework" method="post")
             .raw
                 label(for="name")  نام و نام خانوادگی: 
