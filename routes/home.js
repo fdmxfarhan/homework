@@ -24,6 +24,21 @@ router.get('/', (req, res, next) => {
         });
     }
 });
+router.get('/practice', (req, res, next) => {
+    var username = req.session.username;
+    if(username){
+        res.render('practice', {
+            theme: req.session.theme,
+            username: req.session.username,
+        });
+    }else{
+        res.render('practice', {
+            theme: req.session.theme,
+            username: req.session.username,
+        });
+    }
+});
+
 router.get('/admin', (req, res, next) => {
     Homework.find({}, (err, homeworks) => {
         res.render('admin', {

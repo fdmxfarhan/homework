@@ -1,0 +1,60 @@
+doctype html
+
+html
+    head
+        title Homework
+        link(rel="stylesheet" href="/fontawesome-free-6.6.0-web/css/all.css")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        script(src="/js/jquery-3.5.1.min.js")
+        link(rel='stylesheet', href='/css/home.css')
+        link(rel='stylesheet', href='/css/messages.css')
+        -if(theme){
+            -if(theme == 'light'){
+                link(rel='stylesheet', href='/css/theme.css')
+            -}else{
+                link(rel='stylesheet', href='/css/theme-dark.css')
+            -}
+        -}else{
+            link(rel='stylesheet', href='/css/theme.css')
+        -}
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js")
+        script.
+            hljs.initHighlightingOnLoad();
+    body
+        .black-modal
+        nav
+            -if(theme){
+                -if(theme == 'light'){
+                    a.dark(href="/theme?theme=dark") 
+                        i.fa.fa-moon
+                -}else{
+                    a.dark(href="/theme?theme=light") 
+                        i.fa.fa-sun
+                -}
+            -}else{
+                a.dark(href="/theme?theme=dark") 
+                    i.fa.fa-moon
+            -}
+        include ./components/messages
+        h1.home-title مشاهده تمارین کلاسی
+        a.link(href="/" target="__blank") بازگشت به صفحه اصلی
+        .practice
+            h1 تمرین شماره 1
+            P برنامه ای بنویسید که اندازه سه ضلع یک مثلث را از کاربر با دستور int(input()) بگیرد و سپس نوع مثلث را چاپ کند. (متساوی الاضلاع، متساوی الساقین، مختلف الاضلاع)
+        
+        .practice
+            h1 تمرین شماره 2
+            P برنامه ای بنویسید که یک عدد از کاربر بگیرد و بگوید این عدد زوج است یا فرد.
+            p راهنمایی: از عملگر % استفاده کنید
+        .practice
+            h1 تمرین شماره 3
+            p از کاربر یک رمز بگیر. اگر رمز «1234» بود بنویس «ورود موفق»، وگرنه بنویس «رمز اشتباه است».
+
+        
+        footer
+        //- pre
+        //-     code(class="python")
+        //-         | def fib(n):
+        //-         |   a, b = 0, 1
+                

@@ -142,6 +142,21 @@ pre{text-align: left; direction: ltr;}
         padding: 0.4vw 1vw;
         margin: 0 1vw;
     }
+    .practice{
+        width: 80%;
+        border-radius: 2vw;
+        background-color: var(--lightergray);
+        margin: 1vw auto;
+        padding: 2vw 3vw;
+    }
+    .practice h1{
+        color: var(--red);
+        font-size: 1.4vw;
+    }
+    .practice p{
+        color: var(--black);
+        font-size: 1.2vw; 
+    }
 }
 @media only screen and (max-width: 600px) {}
 a.link{
