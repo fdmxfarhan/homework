@@ -124,7 +124,7 @@ var httpsServer = https.createServer(credentials, app);
 const io = require('socket.io')(httpsServer);
 
 
-httpServer.listen(3000);
+httpServer.listen(3007);
 httpsServer.listen(447);
 console.log('server is started :)')
 
